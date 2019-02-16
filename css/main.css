@@ -29,13 +29,12 @@ body {
     left: 4rem; }
   .header__logo {
     height: 10rem; }
-
-.text-box {
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__text-box {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
@@ -92,8 +91,7 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
   padding: 1rem 2.3rem;

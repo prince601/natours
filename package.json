@@ -1,0 +1,18 @@
+{
+  "name": "natoursproject",
+  "version": "1.0.0",
+  "description": "simple landing page",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o css/ --recursive"
+  },
+  "keywords": [
+    "advanced",
+    "css"
+  ],
+  "author": "Prince kab",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

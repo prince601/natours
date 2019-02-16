@@ -23,14 +23,12 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem; }
-
-.header__logo {
-  height: 10rem; }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 10rem; }
 
 .text-box {
   position: absolute;
@@ -44,29 +42,27 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 1.5rem; }
-
-.heading-primary--main {
-  display: block;
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 2rem;
-  animation: moveInLeft 1s ease-in-out;
-  /* animation-name: moveInLeft;
-  animation-duration: 3000ms;
-  animation-iteration-count: 3;
-  animation-delay: 1000ms; 
-   */ }
-
-.heading-primary--sub {
-  display: block;
-  font-size: 1.4rem;
-  text-transform: capitalize;
-  letter-spacing: 10px;
-  font-weight: 300;
-  animation: moveInRight 1s ease-in-out;
-  /* animation-name: moveInRight;
-  animation-duration: 3000ms;
-  animation-delay: 1000ms; */ }
+  .heading-primary--main {
+    display: block;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation: moveInLeft 1s ease-in-out;
+    /* animation-name: moveInLeft;
+    animation-duration: 3000ms;
+    animation-iteration-count: 3;
+    animation-delay: 1000ms; 
+     */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    letter-spacing: 10px;
+    font-weight: 300;
+    animation: moveInRight 1s ease-in-out;
+    /* animation-name: moveInRight;
+    animation-duration: 3000ms;
+    animation-delay: 1000ms; */ }
 
 @keyframes moveInLeft {
   0% {
@@ -109,7 +105,7 @@ body {
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 1rem 0.5rem rgba(102, 102, 102, 0.4); }
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translate(-1px);

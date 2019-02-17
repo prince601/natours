@@ -1,6 +1,5 @@
 .row {
   max-width: $grid-width;
-  background:#eee;
   margin: 0 auto;
   &:not(:last-child){
     // the :not pseudo element selects everything excepts what we pass in parameter
@@ -11,7 +10,6 @@
     // *= this means any class which contains col-
     // $= this means any class which ends with col-
     float: left;
-    background: orangered;
 
     &:not(:last-child){
       margin-right: $gutter-horizontal;

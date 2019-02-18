@@ -1,1 +1,1 @@
-this folder can contains files for third party code like bootstrap bulma or materialize
+this folder can contain files for third party code like bootstrap,bulma or materialize

@@ -171,29 +171,60 @@ body {
   transform: translate(0); }
 
 .card {
-  perspective: 120rem;
-  -moz-perspective: 120rem;
-  margin-top: 11rem;
-  margin-bottom: 3rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 35rem;
   position: relative; }
   .card__side {
-    background-color: rgba(0, 128, 0, 0.7);
-    height: 25rem;
-    transition: all .4s;
-    font-size: 2rem;
-    color: #cccccc;
+    height: 35rem;
+    transition: all .8s ease;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: .3rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
-      background-color: rgba(0, 128, 0, 0.7); }
+      background-color: #fff; }
     .card__side--back {
-      transform: rotateY(180deg);
-      background-color: red; }
+      transform: rotateY(180deg); }
+      .card__side--back-1 {
+        background-image: linear-gradient(180deg, #0ccaca, #056661); }
   .card:hover .card__side--front {
-    transform: rotateY(1180deg); }
+    transform: rotateY(-180deg); }
   .card:hover .card__side--back {
     transform: rotateY(0deg); }
+  .card__picture {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 18rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    background-blend-mode: screen; }
+    .card__picture--1 {
+      background-image: linear-gradient(180deg, #0ccaca, #056661), url("../img/nat5.jpeg");
+      border-bottom: 0.1rem solid #056661; }
+    .card__picture--2 {
+      background-image: url("../img/nat6.jpeg"); }
+    .card__picture--3 {
+      background-image: url("../img/nat7.jpeg"); }
+  .card__heading {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 13.8rem;
+    right: 0;
+    width: 70%; }
+  .card__heading-span {
+    padding: 1.3rem 1rem; }
+    .card__heading-span--1 {
+      background-image: linear-gradient(180deg, rgba(12, 202, 202, 0.8), rgba(5, 102, 97, 0.8)); }
 
 .composition {
   position: relative; }
@@ -247,6 +278,7 @@ body {
   background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.788), rgba(40, 180, 133, 0.801)), url("../img/header_background.jpeg");
   background-size: cover;
   background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
@@ -303,5 +335,5 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  width: 90%;
-  margin-top: -9rem; }
+  padding: 15rem 0;
+  margin-top: -12vh; }

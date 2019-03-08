@@ -47,7 +47,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   display: inline-block;
-  background: linear-gradient(to right, $primary-color, $primary-color-dark);
+  background: linear-gradient(to right, $color-tertiary-dark, $color-tertiary-light);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: .1rem;
@@ -69,5 +69,13 @@ body {
   font-size: 1rem;
   &:not(:last-child){
     margin-bottom: 2rem;
+  }
+}
+.card__cta {
+
+  p {
+    font-size: 1.2rem;
+    color: white;
+    font-size: 1.1rem;
   }
 }

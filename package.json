@@ -13,6 +13,6 @@
   "author": "Prince kab",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.12.0"
   }
 }

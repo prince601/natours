@@ -341,7 +341,7 @@ body {
   .story__img {
     height: 100%;
     width: 100%;
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: all .4s; }
   .story__text {
     transform: skew(12deg); }
@@ -434,3 +434,14 @@ body {
   padding: 7rem 0;
   background-color: #f7f7f7;
   margin-top: -12vh; }
+
+.section-book {
+  padding: 8rem 0;
+  background-image: linear-gradient(to right bottom, #55c57a, #28b485); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../img/nat4.jpg);
+  background-size: 100%;
+  border-radius: .4rem;
+  box-shadow: 0 1.5rem 20rem rgba(0, 0, 0, 0.2);
+  height: 490px; }

@@ -30,3 +30,22 @@
   background-color: $color-grey-light-1;
   margin-top: -12vh;
 }
+
+.section-book{
+  padding: 8rem 0;
+  background-image: linear-gradient(to right bottom, $primary-color-light,$primary-color-dark);
+}
+
+.book{
+  background-image: linear-gradient(105deg , 
+                      rgba($color-white,.7) 0%,
+                      rgba($color-white,.7) 50%, 
+                      transparent 50%),
+                     url(../img/nat4.jpg);
+  background-size: 100%;
+  // object-fit: cover;
+  border-radius: .4rem;
+  box-shadow: 0 1.5rem 20rem rgba($color-black, .2);
+
+  height: 490px;
+}

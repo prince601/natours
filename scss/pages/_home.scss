@@ -46,6 +46,10 @@
   // object-fit: cover;
   border-radius: .4rem;
   box-shadow: 0 1.5rem 20rem rgba($color-black, .2);
+  &__form{
+    width: 50%;
+    padding: 3rem;
+  }
 
   height: 490px;
 }

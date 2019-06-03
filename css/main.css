@@ -36,7 +36,7 @@ body {
     opacity: 1;
     transform: translateX(0); } }
 
-html {
+:root {
   font-size: 15px; }
 
 body {
@@ -363,6 +363,42 @@ body {
   .story:hover .story__img {
     transform: scale(0.9);
     filter: blur(2px); }
+
+.form__group:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+.form__input {
+  font-size: 1.1rem;
+  padding: 1.1rem 1.1rem;
+  border-radius: .2rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-family: inherit;
+  color: #000;
+  border-bottom: 2px solid transparent;
+  display: block;
+  width: 90%; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #28b485; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid orangered; }
+  .form__input::-webkit-input-placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.1rem;
+  font-weight: 400;
+  padding-left: 1.1rem;
+  margin-top: .3rem;
+  display: block;
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem); }
 
 .header {
   position: relative;

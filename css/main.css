@@ -446,6 +446,44 @@ body {
 .form__radio-input:checked ~ .form__radio-label .form__radio-btn::after {
   opacity: 1; }
 
+.footer {
+  background-color: #333;
+  padding: 10rem 0;
+  font-size: .8rem; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 5rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #666;
+    padding-top: 2rem;
+    width: 80%;
+    float: left; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1rem; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all .3s; }
+  .footer__link:hover, .footer__link:active {
+    background-color: #333;
+    color: #7ed56f;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+    transform: rotate(5deg) scale(1.2); }
+  .footer__copyright {
+    width: 80%;
+    float: right;
+    border-top: 1px solid #666;
+    padding-top: 2rem; }
+
 .header {
   position: relative;
   height: 95vh;

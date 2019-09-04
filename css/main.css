@@ -531,6 +531,64 @@ body {
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 * 3rem) / 4) + 2 * 3rem); }
 
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background: #fff;
+  height: 6rem;
+  width: 6rem;
+  position: fixed;
+  top: 4.5rem;
+  right: 5rem;
+  border-radius: 50%;
+  z-index: 110; }
+
+.navigation__background {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  background-image: radial-gradient(#7ed56f, #28b485);
+  z-index: 100;
+  transform: scale(50); }
+
+.navigation__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 101; }
+
+.navigation__list {
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.navigation__item:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: block;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  background-image: linear-gradient(120deg, orangered 0%, orangered 50%, #fff 50%);
+  background-size: 200%;
+  transition: all .4s ease; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%; }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 15rem 0;

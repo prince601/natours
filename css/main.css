@@ -631,6 +631,17 @@ body {
 .navigation__button:hover .navigation__icon::after {
   bottom: -1rem; }
 
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+  top: 0;
+  transform: rotate(-135deg); }
+
 .section-about {
   background-color: #f7f7f7;
   padding: 15rem 0;

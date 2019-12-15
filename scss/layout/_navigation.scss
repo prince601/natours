@@ -1,149 +1,176 @@
 .navigation {
+  &__checkbox {
+    display: none;
+    // visibility: hidden;
+  }
 
-    &__checkbox{
-        display: none;
-        // visibility: hidden;
+  &__button {
+    background: $color-white;
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    top: 4.5rem;
+    right: 5rem;
+    border-radius: 50%;
+    z-index: 110;
+    box-shadow: 0 1rem 3rem rgba($color-black, 0.3);
+    text-align: center;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 2rem;
     }
 
-    &__button{
-        background: $color-white;
-        height: 6rem;
-        width: 6rem;
-        position: fixed;
-        top: 4.5rem;
-        right: 5rem;
-        border-radius: 50%;
-        z-index: 110;
-        box-shadow: 0 1rem 3rem rgba($color-black, .3);
-        text-align: center;
-        cursor: pointer;
+    @include respond(phone) {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  &__background {
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 5rem;
+    right: 5rem;
+    background-image: radial-gradient($primary-color, $primary-color-dark);
+    z-index: 100;
+    // transform: scale(50);
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+
+    @include respond(tab-port) {
+      top: 2rem;
+      right: 2rem;
     }
 
-    &__background {
-        height: 5rem;
-        width: 5rem;
-        border-radius: 50%;
-        position: fixed;
-        top: 5rem;
-        right: 5rem;
-        background-image: radial-gradient($primary-color, $primary-color-dark);
-        z-index: 100;
-        // transform: scale(50);
-        transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+    @include respond(phone) {
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 101;
+    width: 0;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    // background: orangered;
+  }
+
+  &__list {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      font-size: 2rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      padding: 1rem;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-white 50%
+      );
+      background-size: 220%;
+      transition: all 0.4s ease;
+      // line-height: 3;
+
+      span {
+        margin-right: 0.8rem;
+        display: inline-block;
+      }
     }
 
-    &__nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: 101;
-        width: 0;
-        opacity: 0;
-        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-        // background: orangered;
+    &:hover,
+    &:active {
+      background-position: 100%;
+      color: $primary-color;
+      transform: translateX(0.5rem);
+    }
+  }
+
+  // FUNCTIONNALITY
+
+  &__checkbox:checked ~ &__background {
+    transform: scale(80);
+  }
+
+  &__checkbox:checked ~ &__nav {
+    width: 100%;
+    opacity: 1;
+  }
+
+  //ICON
+
+  &__icon {
+    position: relative;
+    margin-top: 3rem;
+    &,
+    &::before,
+    &::after {
+      width: 2.3rem;
+      height: 2px;
+      background: $color-medium-black;
+      display: inline-block;
     }
 
-    &__list {
-        list-style: none;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 100%;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all 0.2s;
     }
-
-    &__item {
-
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+    &::before {
+      top: -0.8rem;
     }
-
-    &__link {
-        &:link,
-        &:visited {
-            display: inline-block;
-            font-size: 2rem;
-            text-transform: uppercase;
-            font-weight: 300;
-            color: $color-white;
-            text-decoration: none;
-            padding: 1rem;
-            background-image: linear-gradient(120deg,transparent 0%, transparent 50%, $color-white 50%);
-            background-size: 220%;
-            transition: all .4s ease;
-            // line-height: 3;
-
-            span {
-                margin-right: .8rem;
-                display: inline-block;
-            }
-        }
-        
-        &:hover,
-        &:active {
-            background-position: 100%;
-            color: $primary-color;
-            transform: translateX(.5rem);
-        }
+    &::after {
+      bottom: -0.8rem;
     }
+  }
 
-    // FUNCTIONNALITY
+  &__button:hover &__icon::before {
+    top: -1rem;
+  }
+  &__button:hover &__icon::after {
+    bottom: -1rem;
+  }
 
-    &__checkbox:checked ~ &__background{
-        transform: scale(80);
-    }
+  &__checkbox:checked + &__button &__icon {
+    background: transparent;
+  }
 
-    &__checkbox:checked ~ &__nav{
-        width: 100%;
-        opacity: 1;
-    }
+  &__checkbox:checked + &__button &__icon::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
 
-    //ICON
-
-    &__icon {
-        position: relative;
-        margin-top: 3rem;
-        &,
-        &::before,
-        &::after {
-            width: 2.3rem;
-            height: 2px;
-            background: $color-medium-black;
-            display: inline-block;
-        }
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            transition: all .2s;
-        }
-        &::before {top: -.8rem;}
-        &::after{bottom: -.8rem;}
-    }
-
-    &__button:hover &__icon::before{
-        top: -1rem;
-    }
-    &__button:hover &__icon::after{
-        bottom: -1rem;
-    }
-
-    &__checkbox:checked + &__button &__icon {
-      background: transparent;  
-    }
-
-    &__checkbox:checked + &__button &__icon::before {
-        top: 0;
-        transform: rotate(135deg);
-    }
-
-    &__checkbox:checked + &__button &__icon::after {
-        top: 0;        
-        transform: rotate(-135deg);
-    }
+  &__checkbox:checked + &__button &__icon::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
 }

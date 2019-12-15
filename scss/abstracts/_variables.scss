@@ -4,7 +4,7 @@ $primary-color-light: #55c57a;
 $primary-color-dark: #28b485;
 
 $color-grey: #666; //dark-grey
-$color-white:#fff;
+$color-white: #fff;
 $color-medium-black: #333;
 $color-black: #000;
 
@@ -25,14 +25,13 @@ $color-quartiary-dark: #056661;
 
 //-----------------------------------------
 // TYPOGRAPHY
-$font-stack: "Montserrat",
-Arial,
-Helvetica,
-sans-serif;
-$default-font-size:1.5rem;
+$font-stack: "Montserrat", Arial, Helvetica, sans-serif;
+$default-font-size: 1.5rem;
 //------------------------------------------
 
 // GRID
 $grid-width: 90%;
 $gutter-vertical: 4rem;
+$gutter-vertical-small: 2rem;
 $gutter-horizontal: 3rem;
+$gutter-horizontal-small: 1.5rem;

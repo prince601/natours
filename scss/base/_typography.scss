@@ -6,15 +6,15 @@ body {
   font-family: $font-stack;
   font-weight: 400;
   line-height: 1.7;
-  color:$color-grey;
-  padding: 2rem;
+  color: $color-grey;
 }
 
-.heading-primary{
+.heading-primary {
   color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 1.5rem;
+
   &--main {
     display: block;
     font-size: 3rem;
@@ -26,6 +26,13 @@ body {
     animation-iteration-count: 3;
     animation-delay: 1000ms; 
      */
+
+    @include respond(phone) {
+      letter-spacing: .5rem;
+      // font-size: 1.8rem;
+    }
+
+
   }
 
   &--sub {
@@ -35,7 +42,7 @@ body {
     letter-spacing: 10px;
     font-weight: 300;
     animation: moveInRight 1s ease-in-out;
-  
+
     /* animation-name: moveInRight;
     animation-duration: 3000ms;
     animation-delay: 1000ms; */
@@ -57,6 +64,14 @@ body {
     transform: skewY(2deg) skewX(15deg) scale(1.1);
     text-shadow: .2rem .4rem 2rem rgba($color-black, .6);
   }
+
+  @include respond(phone) {
+    font-size: 1rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 1.5rem;
+  }
 }
 
 .heading-tertiary {
@@ -67,10 +82,12 @@ body {
 
 .paragraph {
   font-size: 1rem;
-  &:not(:last-child){
+
+  &:not(:last-child) {
     margin-bottom: 2rem;
   }
 }
+
 .card__cta {
 
   p {

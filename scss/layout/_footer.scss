@@ -1,60 +1,89 @@
 .footer {
-    background-color: $color-medium-black;
-    padding: 10rem 0;
-    font-size: .8rem;
+  background-color: $color-medium-black;
+  padding: 10rem 0;
+  font-size: 0.8rem;
 
-    &__logo-box {
-        text-align: center;
-        margin-bottom: 5rem;
+  @include respond(tab-port) {
+    padding: 4rem 0;
+  }
+  @include respond(phone) {
+    padding: 2rem 0;
+  }
+
+  &__logo-box {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__logo {
+    width: 15rem;
+    height: auto;
+
+    @include respond(tab-port) {
+      width: 10rem;
     }
 
-    &__logo{
-        width: 15rem;
-        height: auto;
+    @include respond(phone) {
+      width: 5rem;
+    }
+  }
+
+  &__navigation {
+    border-top: 1px solid $color-grey;
+    padding-top: 2rem;
+    width: 80%;
+    float: left;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: $color-grey-2;
+      text-transform: uppercase;
+      display: inline-block;
+      transition: all 0.3s;
     }
 
-    &__navigation {
-        border-top: 1px solid $color-grey;
-        padding-top: 2rem;
-        width: 80%;
-        float: left;
+    &:hover,
+    &:active {
+      background-color: $color-medium-black;
+      color: $primary-color;
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      transform: rotate(05deg) scale(1.2);
     }
+  }
 
-    &__list{
-        list-style: none;
+  &__copyright {
+    width: 80%;
+    float: right;
+    border-top: 1px solid $color-grey;
+    padding-top: 2rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+      text-align: center;
     }
-
-    &__item {
-        display: inline-block;
-
-        &:not(:last-child){
-            margin-right: 1rem;
-        }
-    }
-
-    &__link {
-        &:link,
-        &:visited{
-            text-decoration: none;
-            color: $color-grey-2;
-            text-transform: uppercase;
-            display: inline-block;
-            transition: all .3s;
-        }
-
-        &:hover,
-        &:active {
-            background-color: $color-medium-black;
-            color: $primary-color;
-            box-shadow: 0 1rem 2rem rgba($color-black, .4);
-            transform: rotate(05deg) scale(1.2);
-        }
-    }
-
-    &__copyright {
-        width: 80%;
-        float: right;
-        border-top: 1px solid $color-grey;
-        padding-top: 2rem;
-    }
+  }
 }

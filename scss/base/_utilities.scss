@@ -8,10 +8,18 @@
 
 .u-margin-bottom-medium {
   margin-bottom: 2rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 1rem !important;
+  }
 }
 
 .u-margin-bottom-big {
   margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
 }
 
 .u-margin-top-big {
@@ -21,4 +29,3 @@
 .u-margin-top-small {
   margin-top: 1rem !important;
 }
-

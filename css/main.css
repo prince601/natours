@@ -241,13 +241,13 @@ body {
   position: relative; }
   .card__side {
     height: 35rem;
-    transition: all .8s ease;
+    transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
     overflow: hidden;
     box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.15); }
     .card__side--front {
@@ -303,9 +303,9 @@ body {
   .card__details ul {
     list-style: none;
     width: 80%;
-    margin: .7rem auto; }
+    margin: 0.7rem auto; }
     .card__details ul li {
-      padding: .7rem 0;
+      padding: 0.7rem 0;
       text-align: center;
       text-transform: capitalize; }
       .card__details ul li:not(:last-child) {
@@ -399,7 +399,7 @@ body {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s; }
+  transition: all 0.3s; }
   .popup__content {
     box-sizing: border-box;
     position: absolute;
@@ -414,7 +414,7 @@ body {
     overflow: hidden;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
-    transition: all .4s; }
+    transition: all 0.4s; }
   .popup__left {
     width: 33.3333%;
     display: table-cell; }
@@ -459,7 +459,7 @@ body {
     right: 3rem;
     text-decoration: none;
     font-size: 4rem;
-    transition: all .3s; }
+    transition: all 0.3s; }
   .popup__close:hover {
     color: #165c05;
     transform: rotate(90deg); }
@@ -472,6 +472,13 @@ body {
   border-radius: 3px;
   padding: 3rem;
   transform: skewX(-12deg); }
+  @media (max-width: 56.25em) {
+    .story {
+      width: 100%;
+      padding: 1.5rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skewX(0); } }
   .story__shape {
     height: 9rem;
     width: 9rem;
@@ -483,13 +490,19 @@ body {
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-2rem) skew(12deg);
     position: relative; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: translateX(-2rem) skewX(0); } }
   .story__img {
     height: 100%;
     width: 100%;
     transform: scale(1.03);
-    transition: all .4s; }
+    transition: all 0.4s; }
   .story__text {
     transform: skew(12deg); }
+    @media (max-width: 37.5em) {
+      .story__text {
+        transform: skewX(0); } }
   .story__caption {
     position: absolute;
     top: 50%;
@@ -500,7 +513,7 @@ body {
     font-size: 1rem;
     font-weight: bolder;
     opacity: 0;
-    transition: all .4s;
+    transition: all 0.4s;
     backface-visibility: hidden; }
   .story:hover .story__caption {
     opacity: 1;
@@ -515,7 +528,7 @@ body {
 .form__input {
   font-size: 1.1rem;
   padding: 1.1rem 1.1rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   border: none;
   background-color: rgba(255, 255, 255, 0.5);
   font-family: inherit;
@@ -523,7 +536,10 @@ body {
   border-bottom: 2px solid transparent;
   display: block;
   width: 90%;
-  transition: all .3s; }
+  transition: all 0.3s; }
+  @media (max-width: 56.25em) {
+    .form__input {
+      width: 100%; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -537,9 +553,9 @@ body {
   font-size: 1.1rem;
   font-weight: 400;
   padding-left: 1.1rem;
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   display: block;
-  transition: all .3s; }
+  transition: all 0.3s; }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
@@ -549,6 +565,10 @@ body {
 .form__radio-group {
   width: 48%;
   display: inline-block; }
+  @media (max-width: 56.25em) {
+    .form__radio-group {
+      width: 100%;
+      margin-bottom: 0.6rem; } }
 
 .form__radio-input {
   display: none; }
@@ -567,9 +587,9 @@ body {
   border-radius: 50%;
   position: absolute;
   left: 0;
-  top: -.1rem; }
+  top: -0.1rem; }
   .form__radio-btn::after {
-    content: "";
+    content: '';
     display: block;
     width: 1rem;
     height: 1rem;
@@ -580,7 +600,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: opacity .2s; }
+    transition: opacity 0.2s; }
 
 .form__radio-input:checked ~ .form__radio-label .form__radio-btn::after {
   opacity: 1; }
@@ -658,6 +678,10 @@ body {
     .header {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
+  @media (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 81vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 81vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -844,7 +868,7 @@ body {
   margin-bottom: 5rem; }
   @media (max-width: 56.25em) {
     .section-about {
-      padding: 7rem 0; } }
+      padding: 15rem 0; } }
 
 .section-features {
   padding: 10rem 0;
@@ -864,7 +888,7 @@ body {
   margin-top: -12vh; }
   @media (max-width: 56.25em) {
     .section-tours {
-      padding: 10rem 0 5rem 0; } }
+      padding: 10rem 0 8rem 0; } }
 
 .section-stories {
   padding: 7rem 0;
@@ -882,11 +906,23 @@ body {
       padding: 4rem 0; } }
 
 .book {
-  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 50%, transparent 50%), url(../img/nat4.jpg);
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat4.jpg);
   background-size: 100%;
   border-radius: 0.4rem;
-  box-shadow: 0 1.5rem 20rem rgba(0, 0, 0, 0.2);
-  height: 490px; }
+  box-shadow: 0 1.5rem 20rem rgba(0, 0, 0, 0.2); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/nat4.jpg);
+      background-size: cover; } }
+  @media (max-width: 56.25em) {
+    .book {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%), url(../img/nat4.jpg); } }
   .book__form {
     width: 50%;
     padding: 3rem; }
+    @media (max-width: 75em) {
+      .book__form {
+        width: 65%; } }
+    @media (max-width: 56.25em) {
+      .book__form {
+        width: 100%; } }

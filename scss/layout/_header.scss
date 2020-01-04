@@ -6,11 +6,21 @@
       rgba($primary-color-light, 0.788),
       rgba($primary-color-dark, 0.801)
     ),
-    url('../img/header_background.jpeg');
+    url('../img/header_background-900.jpeg');
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @media (min-resolution: 192dpi) and (min-width: 600px),
+    (min-resolution: 2000px) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($primary-color-light, 0.788),
+        rgba($primary-color-dark, 0.801)
+      ),
+      url('../img/header_background.jpeg');
+  }
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

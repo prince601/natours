@@ -2,9 +2,13 @@
   "name": "natoursproject",
   "version": "1.0.0",
   "description": "simple landing page",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
+    "watch:sass": "node-sass -w scss/ -o css/ --recursive",
+    "compile:sass": "node-sass scss/main.scss css/main.comp.css",
+    "concat:sass": "concat -o css/main.concat.css css/linea-icons.css css/main.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.concat.css -o css/main.prefix.css",
+    "compress:css": "node-sass css/main.prefix.css css/main.min.css --output-style compressed"
   },
   "keywords": [
     "advanced",
@@ -13,6 +17,11 @@
   "author": "Prince kab",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "concat": "^1.0.3",
     "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "postcss-cli": "^6.1.3"
   }
 }
